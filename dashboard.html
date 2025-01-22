@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/5b5131ab8e.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./assests/js/common.js"></script>
+</head>
+
+<body class="2xl:max-w-screen-2xl  2xl:mx-auto">
+     <!-- outerdiv  -->
+    <div class="w-[100%] flex h-screen no-scrollbar">
+        <!-- sidebar  -->
+        <div class="sidebar w-[12%] hidden lg:inline-flex bg-brown h-full flex flex-col items-center justify-between gap-4  overflow-y-scroll no-scrollbar">
+           
+           <span class="inline-block text-right">
+            <i class="fa-solid fa-xmark  inline-block lg:hidden text-white " onclick="handlesidebar()"></i>
+            <img src="./assests/imgs/Group 1686558260.png" alt="logo" class="mt-8 w-[4.8rem] ccsm:w-24 sm:w-32">
+            </span>
+            
+            <span >
+
+                <img src="./assests/imgs/dashboar.png" alt="" class="w-16 sm:w-24 cursor-pointer" onclick="window.location.href='dashboard.html'"><br>
+                <img src="./assests/imgs/users.png" alt="" class="w-16 sm:w-24 cursor-pointer  rounded-full" onclick="window.location.href='allusers.html'">
+            </span>
+            <img src="./assests/imgs/signout.png" alt="" class="w-16  sm:w-24 mt-64 mb-4 cursor-pointer" onclick="handlesignout()">
+        </div>
+        <!-- logout dialog  -->
+        <dialog class="logout rounded-2xl w-[28rem] transform scale-0 opacity-0 transition-all duration-500 outline-none">
+            <div class="flex flex-col gap-2 justify-center items-center text-center p-6 ">
+
+                <img src="./assests/imgs/logout.png" alt="" class="w-24 mx-auto">
+                <h1 class="text-3xl font-bold">Sign out</h1>
+                <p class="text-gray-400">Are you sure to sign out your <br> account?</p>
+                <div onclick="window.location.href='home.html'" class="w-full bg-brown text-white font-bold text-center cursor-pointer p-4 rounded-2xl">Sign out</div>
+                <div onclick="closemodal3()" class="w-full cursor-pointer p-4 font-bold text-gray-400 rounded-2xl">Cancel</div>
+            </div>
+
+        </dialog>
+        <!-- content div  -->
+        <div class="w-[100%] lg:w-[88%] bg-gray-100 ">
+            <!-- text content  -->
+            <div class="w-full border-b-2 border-gray-200  pb-4 px-4 fixed bg-white z-10">
+               
+
+                <h2 class="text-3xl font-semibold"> <i class="fa-solid fa-bars text-2xl inline lg:hidden outline outline-1 outline-gray-400 rounded p-1" onclick="handlesidebar()"></i>  Dashboard</h2>
+
+            </div>
+
+            <div class="pt-28 pl-6 h-full animate-slide-up  overflow-y-scroll no-scrollbar">
+                <!-- text div  -->
+                <!-- grid box div  -->
+                <div class="my-2 grid csm:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 pr-6">
+                    <div class="bg-white p-4 shadow-lg hover:scale-105 transform transition duration-300 ease-in-out rounded">
+                        <h1 class="my-2 text-xl text-gray-400">
+                            All Users
+                        </h1>
+                        <h1 class="text-[2.5rem] font-bold mb-8">
+                            5,503,420
+                        </h1>
+                    </div>
+                    <div class="bg-white p-4 shadow-lg hover:scale-105 transform transition duration-300 ease-in-out rounded">
+                        <h1 class="my-2 text-xl text-gray-400">
+                            Service Seekers
+                        </h1>
+                        <h1 class="text-[2.5rem] font-bold mb-8">
+                            32,546
+                        </h1>
+                    </div>
+                    <div class="bg-white p-4 shadow-lg hover:scale-105 transform transition duration-300 ease-in-out rounded">
+                        <h1 class="my-2 text-xl text-gray-400">
+                            Service Providers
+                        </h1>
+                        <h1 class="text-[2.5rem] font-bold mb-8">
+                            8,756
+                        </h1>
+                    </div>
+                    <div class="bg-white p-4 shadow-lg hover:scale-105 transform transition duration-300 ease-in-out rounded">
+                        <h1 class="my-2 text-xl text-gray-400"> 
+                            Premium Users
+                        </h1>
+                        <h1 class="text-[2.5rem] font-bold mb-8">
+                            4,256
+                        </h1>
+                    </div>
+                    <div class="bg-white p-4 shadow-lg hover:scale-105 transform transition duration-300 ease-in-out rounded ">
+                        <h1 class="my-2 text-xl text-gray-400">
+                            Total Revenue
+                        </h1>
+                        <h1 class="text-[2.5rem] font-bold mb-8">
+                            $ 50,078
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
